@@ -1,3 +1,5 @@
+[ ![Codeship Status for ntslive/text-sanitizer](https://app.codeship.com/projects/eb4a67e0-be67-0135-79fa-7a3b297a5cf0/status?branch=master)](https://app.codeship.com/projects/259879)
+
 # NTS Text Sanitizer
 
 Text Sanitizer used by NTS in their Node applications.
