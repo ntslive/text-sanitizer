@@ -1,0 +1,48 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+
+  "extends": "eslint:recommended", /* Predefines large set of rules to check (see "http://eslint.org/docs/rules/" for full list of rules) */
+  "rules": {
+    // 0 = allowed, 1 = warning, 2 = error.
+
+    // Javascript
+    "no-unused-vars": 0, /* Allow unused variables. Good for leaving unused function parameters visible */
+    "no-console": 0, /* Allow console logs */
+    "no-extra-boolean-cast": 0, /* Allow for unnecessary '!!value'. FIXME: let's try tighten this  */
+    "no-redeclare": 0, /* Allow for variables to be redefined. There are scenarios where this allows for cleaner code. */
+
+    "block-scoped-var": 2, // Enforces vars defined aren't used outwith their defined block.
+    "dot-notation": 2, // Enforces accessing object properites via dot notation.
+    "no-alert": 1, // Throws warning use of alert, confirm and prompt dialogues.
+    "no-extend-native": 2, // Prevents extending native JS objects.
+    "no-floating-decimal": 2, // Prevents using decimal place with prefixing / suffixing with numeric e.g. '.5'
+    "no-lone-blocks": 2, // Prevents use of an empty block e.g. {}
+
+    "no-self-compare": 2, // Prevents comparing vars to themselves
+    "yoda": 2, // Prevents reversed comparison.
+    "no-undef-init": 2, // Prevents settings a var to undefined.
+
+    // Node JS
+    "global-require": 1, // Enforces all require statements to be made at the top of the file. TODO: Enfore this.
+    "handle-callback-err": 0, // TODO: We want to enforce this, but it's quite a large change to codebase. Integrate this once we've solidified loading an error page.
+    "no-sync": 2,  // warns whever a synchronous methods is used. TODO: @andi, does the readFileSync in app.js need to be synchronous?
+
+    // Stylistic
+    "comma-dangle": ["error", "always-multiline"],
+    "consistent-this": 2, // Enforces consisten naming of "this" object assignment to be named "that".
+    "func-call-spacing": 2, // Enforces function calls to have no spacing e.g. doSomething(param).
+    "indent": 2, // Enforces project to use 4 spaces as a tab.
+    "no-var": 0, // TODO: Enable this to prevent usage of 'var', and only allow 'let' or 'const'.
+    "semi": [2, "always"],
+    "brace-style": ["error", "1tbs", { "allowSingleLine": true }] // Enforces same-line "} else ..." statements.
+  },
+
+  /* Sets which variables are available & globally accessible */
+  "env": {
+    "node": true,
+    "mocha": true
+  }
+}

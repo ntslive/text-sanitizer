@@ -1,0 +1,34 @@
+{
+  "name": "text-sanitizer",
+  "version": "0.0.1",
+  "description": "Logger used by NTS in their Node applications, captures errors with Raven",
+  "main": "text-sanitizer.js",
+  "scripts": {
+    "test": "PATH=$(npm bin):$PATH eslint ./ && PATH=$(npm bin):$PATH SENTRY_DSN=https://1234:1234@sentry.io/4567 mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ntslive/text-sanitizer.git"
+  },
+  "keywords": [
+    "node",
+    "string",
+    "html",
+    "sanitizer"
+  ],
+  "author": "Andi Studer <andi@ntslive.co.uk> (http://www.nts.live)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ntslive/sanitizer/issues"
+  },
+  "homepage": "https://github.com/ntslive/sanitizer#readme",
+  "dependencies": {
+    "he": "^1.1.1",
+    "sanitize-html": "^1.16.1",
+    "showdown": "1.6.4"
+  },
+  "devDependencies": {
+    "eslint": "^4.4.1",
+    "mocha": "^3.5.0"
+  }
+}
