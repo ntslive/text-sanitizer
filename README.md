@@ -3,13 +3,13 @@
 # NTS Text Sanitizer
 
 Text Sanitizer used by NTS in their Node applications.
-Sanitizes text blocks.
+Sanitizes text blocks, including removal of HTML tags (excluding whitelisted tags) and transformation of Markdown into HTML.
 
 ## Installation
 
 Include as dependency in `package.json`:
 
-`"text-sanitizer": "ntslive/text-sanitizer#0.0.1",`
+`"text-sanitizer": "github:ntslive/text-sanitizer#0.0.1"`
 
 Note that this requires the Git tag `0.0.1` to be present.
 
@@ -18,8 +18,9 @@ Then run `npm install` as usual.
 ## Usage
 
 ```Javascript
-const logger = require('text-sanitizer');
-logger.error(errorMessage, errorInstance, { dataContext: dataObject });
+const textSanitizer = require('text-sanitizer');
+let plainTextName = textSanitizer.stripMarkdownTags(obj.name);
+let descriptionHtml = textSanitizer.sanitizeText(obj.description);
 ```
 
 ## Testing
