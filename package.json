@@ -4,7 +4,7 @@
   "description": "Logger used by NTS in their Node applications, captures errors with Raven",
   "main": "text-sanitizer.js",
   "scripts": {
-    "test": "PATH=$(npm bin):$PATH eslint ./ && PATH=$(npm bin):$PATH SENTRY_DSN=https://1234:1234@sentry.io/4567 mocha"
+    "test": "PATH=$(npm bin):$PATH eslint ./ && PATH=$(npm bin):$PATH SENTRY_DSN=https://1234:1234@sentry.io/4567 mocha --exit"
   },
   "repository": {
     "type": "git",
