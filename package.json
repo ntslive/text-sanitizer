@@ -24,11 +24,11 @@
   "homepage": "https://github.com/ntslive/sanitizer#readme",
   "dependencies": {
     "he": "^1.1.1",
-    "sanitize-html": "^1.16.1",
-    "showdown": "1.6.4"
+    "sanitize-html": "^1.18.2",
+    "showdown": "^1.8.6"
   },
   "devDependencies": {
-    "eslint": "^4.4.1",
-    "mocha": "^3.5.0"
+    "eslint": "^4.19.1",
+    "mocha": "^5.1.1"
   }
 }

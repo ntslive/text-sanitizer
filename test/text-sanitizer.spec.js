@@ -64,11 +64,7 @@ describe('Text Sanitizer', function() {
 
         it('it converts links and other inline markup', function() {
             let sanitizedDescription = stringHelper.sanitizeText('My [link](http://example.com) is _important_');
-            assert.equal(sanitizedDescription, '<h3>My <a href="http://example.com">link</a> is <em>important</em></h3>');
-            /**
-             * uncomment line below when 'openLinksInNewWindow' enabled
-             * assert.equal(sanitizedDescription, '<h3>My <a href="http://example.com" target="_blank">link</a> is <em>important</em></h3>');
-             */
+            assert.equal(sanitizedDescription, '<h3>My <a href="http://example.com" target="_blank">link</a> is <em>important</em></h3>');
         });
     });
 });

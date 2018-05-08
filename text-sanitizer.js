@@ -3,13 +3,7 @@ const he = require('he');
 const showdown = require('showdown');
 
 const converter = new showdown.Converter();
-/**
- * I had to disable the 'openLinksInNewWindow' as there is an issue if it
- * breaking the conversion of em tags see: https://github.com/showdownjs/showdown/issues/379
- * Once resolved we can uncomment the line below
- * (Note: we might need to update package.json to compile from github source)
- * converter.setOption('openLinksInNewWindow', true);
- */
+converter.setOption('openLinksInNewWindow', true);
 
 /**
  * Strips all HTML tags from a string
