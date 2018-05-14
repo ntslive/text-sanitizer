@@ -54,3 +54,22 @@ module.exports.sanitizeText = function(text) {
 
     return he.decode(text);
 };
+
+/**
+ * Creates an excerpt from text based upon word length.
+ * Adds an ellipsis to end of excerpt if word limit is less than word length of text.
+ *
+ * @param {string} text  - Text to create excerpt from.
+ * @param {string} wordLimit - Number of words to cut the text at. Default is 104 (13 words * 8 lines).
+ * @return String
+ */
+module.exports.createExcerpt = function(text, wordLimit = 104) {
+    if (!text || text.length === 0) return "";
+
+    const textArray = text.split(" ");
+
+    let succeedingModifier = "";
+    if (textArray.length > wordLimit) succeedingModifier = "...";
+
+    return textArray.slice(0,wordLimit).join(" ") + succeedingModifier;
+};

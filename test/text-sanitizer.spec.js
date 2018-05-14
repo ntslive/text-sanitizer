@@ -67,4 +67,16 @@ describe('Text Sanitizer', function() {
             assert.equal(sanitizedDescription, '<h3>My <a href="http://example.com" target="_blank">link</a> is <em>important</em></h3>');
         });
     });
+
+    describe('createExcerpt', function() {
+        it('returns full biography when word limit is greater than word length of text', function() {
+            let sanitizedDescription = textSanitizer.createExcerpt('one two three four', 5);
+            assert.equal(sanitizedDescription, 'one two three four');
+        });
+
+        it('returns excerpt with ellipsis when world limit is less than word length of text', function() {
+            let sanitizedDescription = textSanitizer.createExcerpt('one two three four five six', 5);
+            assert.equal(sanitizedDescription, 'one two three four five...');
+        });
+    });
 });
