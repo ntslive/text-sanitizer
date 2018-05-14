@@ -21,6 +21,7 @@ Then run `npm install` as usual.
 const textSanitizer = require('text-sanitizer');
 let plainTextName = textSanitizer.stripMarkdownTags(obj.name);
 let descriptionHtml = textSanitizer.sanitizeText(obj.description);
+let excerpt = textSanitizer.createExcerpt(obj.description);
 ```
 
 ## Testing

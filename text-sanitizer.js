@@ -9,28 +9,28 @@ converter.setOption('openLinksInNewWindow', true);
  * Strips all HTML tags from a string
  * ensures the string is decoded (example '&amp;' is transformed to '&')
  *
- * @param string - String
+ * @param {string} text
  * @returns String
  */
-module.exports.stripMarkdownTags = function(string) {
-    if (!string) return '';
+module.exports.stripMarkdownTags = function(text) {
+    if (!text) return '';
 
-    string = converter.makeHtml(string);
+    text = converter.makeHtml(text);
 
     // to replace <br /> tag with line break \n char. Not sure how to do this with sanitize-html package
-    string = string.replace(/<br ?\/?>/g, '\n');
+    text = text.replace(/<br ?\/?>/g, '\n');
 
-    return he.decode(sanitizeHtml(string, {
+    return he.decode(sanitizeHtml(text, {
         allowedTags: [],
     }));
 };
 
 /**
  * Parses a string to be used as text parameter in the show or episode detail view.
- * If no HTML tags, it wrapps the string with a h3 tag.
+ * If no HTML tags, it wraps the string with a h3 tag.
  * Else it transform the first p tag into a H3 tag for SEO reasons.
  *
- * @param text - String
+ * @param {string} text
  * @returns String
  */
 module.exports.sanitizeText = function(text) {
@@ -53,4 +53,23 @@ module.exports.sanitizeText = function(text) {
     text = text.replace(/<\/p>/, '</h3>');
 
     return he.decode(text);
+};
+
+/**
+ * Creates an excerpt from text based upon word length.
+ * Adds an ellipsis to end of excerpt if word limit is less than word length of text.
+ *
+ * @param {string} text  - Text to create excerpt from.
+ * @param {string} wordLimit - Number of words to cut the text at. Default is 104 (13 words * 8 lines).
+ * @return String
+ */
+module.exports.createExcerpt = function(text, wordLimit = 104) {
+    if (!text || text.length === 0) return "";
+
+    const textArray = text.split(" ");
+
+    let succeedingModifier = "";
+    if (textArray.length > wordLimit) succeedingModifier = "...";
+
+    return textArray.slice(0,wordLimit).join(" ") + succeedingModifier;
 };
