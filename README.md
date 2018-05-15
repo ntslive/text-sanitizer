@@ -9,9 +9,9 @@ Sanitizes text blocks, including removal of HTML tags (excluding whitelisted tag
 
 Include as dependency in `package.json`:
 
-`"text-sanitizer": "github:ntslive/text-sanitizer#0.0.3"`
+`"text-sanitizer": "github:ntslive/text-sanitizer#0.0.4"`
 
-Note that this requires the Git tag `0.0.3` to be present.
+Note that this requires the Git tag `0.0.4` to be present.
 
 Then run `npm install` as usual.
 
