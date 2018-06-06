@@ -1,6 +1,6 @@
 {
   "name": "text-sanitizer",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "Logger used by NTS in their Node applications, captures errors with Raven",
   "main": "text-sanitizer.js",
   "scripts": {
