@@ -23,12 +23,12 @@
   },
   "homepage": "https://github.com/ntslive/sanitizer#readme",
   "dependencies": {
-    "he": "^1.1.1",
-    "sanitize-html": "^1.18.2",
-    "showdown": "^1.8.6"
+    "he": "^1.2.0",
+    "sanitize-html": "^1.20.0",
+    "showdown": "^1.9.0"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
-    "mocha": "^5.1.1"
+    "mocha": "^5.2.0"
   }
 }
