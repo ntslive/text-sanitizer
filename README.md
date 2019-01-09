@@ -2,7 +2,7 @@
 
 # NTS Text Sanitizer
 
-Text Sanitizer used by NTS in their Node applications.
+Text Sanitizer used by [NTS](https://www.nts.live) in their Node.js applications.
 Sanitizes text blocks, including removal of HTML tags (excluding whitelisted tags) and transformation of Markdown into HTML.
 
 ## Installation
