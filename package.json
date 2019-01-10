@@ -1,7 +1,7 @@
 {
   "name": "text-sanitizer",
   "version": "1.0.0",
-  "description": "Logger used by NTS in their Node applications, captures errors with Raven",
+  "description": "Text Sanitizer used by NTS in their Node applications. Converts Markdown, and creates excerpts.",
   "main": "text-sanitizer.js",
   "scripts": {
     "test": "PATH=$(npm bin):$PATH eslint ./ && PATH=$(npm bin):$PATH SENTRY_DSN=https://1234:1234@sentry.io/4567 mocha --exit"
@@ -16,19 +16,19 @@
     "html",
     "sanitizer"
   ],
-  "author": "Andi Studer <andi@ntslive.co.uk> (http://www.nts.live)",
+  "author": "Andi Studer <andi@ntslive.co.uk> (https://www.nts.live)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ntslive/sanitizer/issues"
+    "url": "https://github.com/ntslive/text-sanitizer/issues"
   },
-  "homepage": "https://github.com/ntslive/sanitizer#readme",
+  "homepage": "https://github.com/ntslive/text-sanitizer#readme",
   "dependencies": {
-    "he": "^1.1.1",
-    "sanitize-html": "^1.18.2",
-    "showdown": "^1.8.6"
+    "he": "^1.2.0",
+    "sanitize-html": "^1.20.0",
+    "showdown": "^1.9.0"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
-    "mocha": "^5.1.1"
+    "mocha": "^5.2.0"
   }
 }
