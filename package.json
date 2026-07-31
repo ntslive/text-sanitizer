@@ -1,6 +1,6 @@
 {
   "name": "text-sanitizer",
-  "version": "2.0.0",
+  "version": "3.0.1",
   "description": "Text Sanitizer used by NTS in their Node applications. Converts Markdown, and creates excerpts.",
   "main": "text-sanitizer.js",
   "scripts": {
@@ -24,7 +24,7 @@
   "homepage": "https://github.com/ntslive/text-sanitizer#readme",
   "dependencies": {
     "he": "^1.2.0",
-    "sanitize-html": "^2.17.6",
+    "sanitize-html": "^1.27.5",
     "showdown": "^2.1.0"
   },
   "devDependencies": {
