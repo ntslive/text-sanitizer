@@ -24,7 +24,7 @@
   "homepage": "https://github.com/ntslive/text-sanitizer#readme",
   "dependencies": {
     "he": "^1.2.0",
-    "sanitize-html": "2.17.1",
+    "sanitize-html": "2.17.5",
     "showdown": "^2.1.0"
   },
   "devDependencies": {
